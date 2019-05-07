@@ -7,9 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DDDExemplo.Controllers
 {
-    [Route("api/v1/pessoas")]
-    [ApiController]
-    public class PessoasController : ControllerBase
+    [Route("api/v1/pessoas")]    
+    public class PessoasController : ApiBaseController
     {
         private readonly IMediator _mediator;
         private readonly IPessoaQuery _pessoaQueries;
@@ -36,7 +35,7 @@ namespace DDDExemplo.Controllers
         [HttpPost]
         public async Task<IActionResult> AdicionarPessoa([FromBody]AdicionarPessoaCommand pessoa)
         {
-            return Ok(await _mediator.Send(pessoa));
+            return ApiResponse(await _mediator.Send(pessoa));
         }
     }
 }

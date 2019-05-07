@@ -2,7 +2,7 @@ using System;
 
 namespace DDDExemplo
 {
-  public abstract class Entity
+  public abstract class Entity : DomainNotification
   {
     public string Id { get; private set; }
 

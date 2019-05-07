@@ -10,5 +10,12 @@ namespace DDDExemplo
         Nome = nome;
         Documento = document;
     }
+
+    public void AlterarNome(string nome)
+    {
+      if (string.IsNullOrEmpty(nome)) AddNotification("Pessoa.Nome", "Nome inválido");
+      
+      Nome = nome;
+    }
   }
 }
