@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-    <RootNamespace>DDDExemplo</RootNamespace>
+    <RootNamespace>CqrsExemplo</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

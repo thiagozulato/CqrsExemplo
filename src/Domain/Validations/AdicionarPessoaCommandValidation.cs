@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace DDDExemplo
+namespace CqrsExemplo
 {
   public class AdicionarPessoaCommandValidator : AbstractValidator<AdicionarPessoaCommand>
   {

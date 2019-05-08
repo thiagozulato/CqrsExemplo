@@ -3,7 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
 
-namespace DDDExemplo
+namespace CqrsExemplo
 {
   public class AdicionarPessoaCommandHandler : IRequestHandler<AdicionarPessoaCommand, ICommandResult>
   {
@@ -22,10 +22,28 @@ namespace DDDExemplo
     {
       if (!command.IsValid())
       {
-        return Task.FromResult<ICommandResult>(new CommandErrorResult(command));
+        return Task.FromResult<ICommandResult>(new CommandResult(
+          1,
+          false,
+          "Erro de Validação",
+          null,
+          command.ValidationResult.Errors
+        ));
       }
 
       var pessoa = new Pessoa(command.Nome, command.Documento);
+
+      if (pessoa.HasErrors())
+      {
+        return Task.FromResult<ICommandResult>(new CommandResult(
+          2, 
+          false,
+          "Erro de Entidade",
+          null,
+          pessoa.GetErrors()
+        ));
+      }
+      
       _pessoaRepository.Incluir(pessoa);
 
       // Comunica evento
@@ -34,7 +52,7 @@ namespace DDDExemplo
           pessoa.Nome,
           pessoa.Documento), cancellationToken);
 
-      return Task.FromResult<ICommandResult>(new CommandResult(0, string.Empty, new { Id = pessoa.Id }));
+      return Task.FromResult<ICommandResult>(new CommandResult(0, true, string.Empty, new { Id = pessoa.Id }));
     }
   }
 }
