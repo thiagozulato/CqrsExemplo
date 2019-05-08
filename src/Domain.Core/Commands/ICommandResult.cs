@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using FluentValidation.Results;
 
-namespace DDDExemplo
+namespace CqrsExemplo
 {
   public interface ICommandResult
   {

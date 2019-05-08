@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DDDExemplo
+namespace CqrsExemplo
 {
   public class PessoaQuery : IPessoaQuery
   {

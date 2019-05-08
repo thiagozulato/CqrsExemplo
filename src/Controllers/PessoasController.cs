@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DDDExemplo.Controllers
+namespace CqrsExemplo.Controllers
 {
     [Route("api/v1/pessoas")]    
     public class PessoasController : ApiBaseController

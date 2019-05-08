@@ -1,6 +1,6 @@
 using System;
 
-namespace DDDExemplo
+namespace CqrsExemplo
 {
   public abstract class Entity : DomainNotification
   {

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace DDDExemplo
+namespace CqrsExemplo
 {
   public interface IPessoaQuery
   {

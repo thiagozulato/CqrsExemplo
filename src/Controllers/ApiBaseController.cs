@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace DDDExemplo
+namespace CqrsExemplo
 {
 
   [ApiController]

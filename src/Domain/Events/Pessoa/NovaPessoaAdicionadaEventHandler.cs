@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using MediatR;
 
-namespace DDDExemplo {
+namespace CqrsExemplo {
   public class NovaPessoaAdicionadaEventHandler : INotificationHandler<NovaPessoaAdicionadaEvent>
   {
     public Task Handle(NovaPessoaAdicionadaEvent notification, CancellationToken cancellationToken)

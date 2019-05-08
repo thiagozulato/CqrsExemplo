@@ -1,4 +1,4 @@
-namespace DDDExemplo
+namespace CqrsExemplo
 {
   public class NovaPessoaAdicionadaEvent : Event
   {

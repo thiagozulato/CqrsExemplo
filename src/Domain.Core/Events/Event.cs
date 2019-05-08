@@ -1,7 +1,7 @@
 using System;
 using MediatR;
 
-namespace DDDExemplo
+namespace CqrsExemplo
 {
   public abstract class Event : INotification
   {

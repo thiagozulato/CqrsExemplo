@@ -3,7 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
 
-namespace DDDExemplo
+namespace CqrsExemplo
 {
   public class AdicionarPessoaCommandHandler : IRequestHandler<AdicionarPessoaCommand, ICommandResult>
   {
@@ -32,7 +32,6 @@ namespace DDDExemplo
       }
 
       var pessoa = new Pessoa(command.Nome, command.Documento);
-      pessoa.AlterarNome(""); // força um erro
 
       if (pessoa.HasErrors())
       {

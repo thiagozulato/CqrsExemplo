@@ -9,7 +9,7 @@
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/src/bin/Debug/netcoreapp2.2/DDDExemplo.dll",
+      "program": "${workspaceFolder}/src/bin/Debug/netcoreapp2.2/CqrsExemplo.dll",
       "args": [],
       "cwd": "${workspaceFolder}",
       "stopAtEntry": false,

@@ -2,7 +2,7 @@ using FluentValidation.Results;
 using Newtonsoft.Json;
 using MediatR;
 
-namespace DDDExemplo
+namespace CqrsExemplo
 {
   public abstract class Command : IRequest<ICommandResult>
   {
