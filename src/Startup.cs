@@ -26,9 +26,10 @@ namespace CqrsExemplo
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddSingleton<IPessoaRepository, PessoaRepository>();
-            services.AddScoped<IPessoaQuery, PessoaQuery>();
+        {            
+            services.AddSingleton<IPessoaFakeData, PessoaFakeData>();
+            services.AddTransient<IPessoaRepository, PessoaRepository>();
+            services.AddTransient<IPessoaQueryRepository, PessoaQueryRepository>();
 
             services.AddMediatR(typeof(Startup));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);

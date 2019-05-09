@@ -1,6 +1,6 @@
 namespace CqrsExemplo
 {
-  public class PessoaQueryResult
+  public class PessoaModel
   {
     public string Id { get; set; }
     public string Nome { get; set; }
