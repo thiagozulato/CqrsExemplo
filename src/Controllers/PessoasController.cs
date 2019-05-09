@@ -11,25 +11,22 @@ namespace CqrsExemplo.Controllers
     public class PessoasController : ApiBaseController
     {
         private readonly IMediator _mediator;
-        private readonly IPessoaQuery _pessoaQueries;
 
-        public PessoasController(IMediator mediator,
-                                 IPessoaQuery pessoaQueries)
+        public PessoasController(IMediator mediator)
         {
             _mediator = mediator;
-            _pessoaQueries = pessoaQueries;
         }
 
         [HttpGet()]
-        public IActionResult SelecionarTodos()
+        public async Task<IActionResult> SelecionarTodos()
         {
-            return Ok(_pessoaQueries.ListarTodos());
+            return Ok(await _mediator.Send(new PessoaEmBrancoQuery()));
         }
         
         [HttpGet("{idPessoa}")]
-        public IActionResult SelecionarPorId(string idPessoa)
+        public async Task<IActionResult> SelecionarPorId(string idPessoa)
         {
-            return Ok(_pessoaQueries.ListaPorId(idPessoa));
+            return Ok(await _mediator.Send(new PessoaIdQuery { Id = idPessoa }));
         }
         
         [HttpPost]

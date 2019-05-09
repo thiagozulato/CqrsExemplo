@@ -1,3 +1,4 @@
+using System.Collections;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CqrsExemplo
