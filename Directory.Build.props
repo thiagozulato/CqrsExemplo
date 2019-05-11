@@ -1,0 +1,12 @@
+<Project>
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+    </PropertyGroup>
+    
+    <!-- dependencias -->
+    <PropertyGroup>        
+        <MediatRVersion>7.0.0</MediatRVersion>
+        <FluentValidationVersion>8.4.0</FluentValidationVersion>
+        <NewtonsoftJsonVersion>12.0.2</NewtonsoftJsonVersion>
+    </PropertyGroup>
+</Project>

@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>CqrsExemplo.Infra.Data</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CqrsExemplo.Domain\CqrsExemplo.Domain.csproj" />
+    <ProjectReference Include="..\CqrsExemplo.Domain.Core\CqrsExemplo.Domain.Core.csproj" />
+  </ItemGroup>
+
+</Project>
