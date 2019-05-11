@@ -9,7 +9,7 @@
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/src/bin/Debug/netcoreapp2.2/CqrsExemplo.dll",
+      "program": "${workspaceFolder}/CqrsExemplo.Api/bin/Debug/netcoreapp2.2/CqrsExemplo.Api.dll",
       "args": [],
       "cwd": "${workspaceFolder}",
       "stopAtEntry": false,
