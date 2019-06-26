@@ -12,6 +12,16 @@ pool:
 variables:
   buildConfiguration: 'Release'
 
-steps:
-- script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
+stages:
+- stage: Build
+  displayName: CQRS Build Process
+  jobs:
+  - job: BuildCqrsExemplo
+    steps:
+    - script: dotnet build --configuration $(buildConfiguration)
+      displayName: 'dotnet build $(buildConfiguration)'
+  - job: TestCqrsExemplo
+    displayName: Testing Process
+    steps:
+      - script: dotnet test --no-build --no-restore
+        displayName: 'dotnet test'
