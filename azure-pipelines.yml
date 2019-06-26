@@ -14,14 +14,14 @@ variables:
 
 stages:
 - stage: Build
-  displayName: CQRS Build Process
+  displayName: 'CQRS Build Process'
   jobs:
   - job: BuildCqrsExemplo
     steps:
     - script: dotnet build --configuration $(buildConfiguration)
       displayName: 'dotnet build $(buildConfiguration)'
 - stage: Test
-  displayName: Testing Process
+  displayName: 'Testing Process'
   jobs:
   - job: TestCqrsExemplo    
     steps:
