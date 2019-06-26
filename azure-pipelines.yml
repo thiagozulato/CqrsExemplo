@@ -20,8 +20,10 @@ stages:
     steps:
     - script: dotnet build --configuration $(buildConfiguration)
       displayName: 'dotnet build $(buildConfiguration)'
-  - job: TestCqrsExemplo
-    displayName: Testing Process
+- stage: Test
+  displayName: Testing Process
+  jobs:
+  - job: TestCqrsExemplo    
     steps:
       - script: dotnet test --no-build --no-restore
         displayName: 'dotnet test'
