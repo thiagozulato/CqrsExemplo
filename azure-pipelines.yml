@@ -6,9 +6,6 @@
 trigger:
 - master
 
-pool:
-  vmImage: 'ubuntu-latest'
-
 variables:
   buildConfiguration: 'Release'
 
@@ -17,13 +14,17 @@ stages:
   displayName: 'CQRS Build Process'
   jobs:
   - job: BuildCqrsExemplo
+    pool:
+      vmImage: 'ubuntu-latest'
     steps:
     - script: dotnet build --configuration $(buildConfiguration)
       displayName: 'dotnet build $(buildConfiguration)'
 - stage: Test
   displayName: 'Testing Process'
   jobs:
-  - job: TestCqrsExemplo    
+  - job: TestCqrsExemplo
+    pool:
+      vmImage: 'ubuntu-latest'
     steps:
       - script: dotnet test --no-build --no-restore
         displayName: 'dotnet test'
